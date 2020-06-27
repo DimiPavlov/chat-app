@@ -11,13 +11,10 @@ function Contact(props) {
                 alt= {props.name}/>
             <div>
                 <p className="name">{props.name}</p>
-                <div className="status">{props.status}
-                     {/* <div className= "status-online" /> */}
-    
-                     {/* <div className="status-offline" /> */}
-                        <p className="status-text"> {props.online ? <div className="status-online"></div>
-                         : <div className="status-offline">  </div>}</p>
-               
+                <div className="status">
+                    <div className={props.online ? "status-online" : "status-offline"}></div>
+                    <p className="status-text"> {props.online ? "online" : "offline"}</p>
+                    
                 </div>
             </div>
     </div>
